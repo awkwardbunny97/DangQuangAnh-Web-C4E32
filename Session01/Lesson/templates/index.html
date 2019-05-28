@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {%for item in data %}
+
+    <h1>{{ item.title }}</h1>
+
+    {{ item.body }}
+    
+    {%if gender == 1 %}
+    <p><strong>{{ item.gender.author }}</strong></p>
+    {%endif %}
+
+    {% endfor %}
+<!-- 
+    <h1>{{ data.title }}</h1>
+
+    {{ data.body }}
+    
+    <p><strong>{{ data.author }}</strong></p> -->
+</body>
+
+</html>
