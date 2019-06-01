@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <form method = 'post' class ='login'>
+        <label><b>Username:</b></label>
+        <input type="text" name="username" value="{{request.form.username}}" required>
+        <label><b>Password:</b></label>
+        <input type="password" name="password" value="{{request.form.password}}" required>
+        <button type="submit">Login</button>
+    </form>  
+    
+    {% if error %}
+    <p>Login Failed!</p>
+    {% endif %}
+
+    <style>
+        .login{
+            height: 150px;
+            width: 190px;
+            margin: left;
+            padding: 10px;
+        }
+
+        .login input button{
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</html>
